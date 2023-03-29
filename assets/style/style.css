@@ -3,12 +3,20 @@
     margin: 0;
     box-sizing: border-box;
     cursor: crosshair;
+    text-decoration: none;
 }
 body{
     background-color: black;
     color: white;
+    position: relative;
 }
 .flex-center-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.flex-center{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,6 +34,10 @@ body{
 .discord{
     display: none;
 }
+.text{
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+}
 button{
     background: none;
 	color: inherit;
@@ -34,4 +46,14 @@ button{
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
+}
+footer{
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: 10px;
+}
+footer *{
+    color: white;
 }

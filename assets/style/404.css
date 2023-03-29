@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    cursor: crosshair;
+}
+body{
+    background-color: black;
+    color: white;
+    position: relative;
+}
+.flex-center-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    height: 100%;
+}
+.main *{
+    line-height: 2rem;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+}
+.main a{
+    text-decoration:underline;
+    text-underline-offset: 2px;
+}
