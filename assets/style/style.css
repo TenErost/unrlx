@@ -10,11 +10,11 @@ body{
     color: white;
     position: relative;
 }
-.flex-center-column{
+.flex-center-column-left{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: left;
 }
 .flex-center{
     display: flex;
@@ -22,17 +22,54 @@ body{
     justify-content: center;
     align-items: center;
 }
+.flex-row-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}
+.container {
+    display: grid;
+    height: 100dvh; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 20px 20px; 
+    grid-template-areas: 
+      "a b"; 
+    align-items: center;
+  }
 .main{
     height: 100%;
+    margin: 20px;
+    padding: 10px;
 }
 .main *{
     text-decoration: none;
     line-height: 2rem;
-    color: white;
+    color: rgb(255, 255, 255);
     font-family: 'Roboto Mono', monospace;
 }
-.main a:hover{
-    text-decoration: underline;
+.card{
+    margin: 20px;
+    padding: 10px;
+    background-color: a286d5;
+    border-radius: 20px;
+    font-family: 'Roboto Mono', monospace;
+    min-width: 400px;
+}
+.pfp-image{
+    width: 128px;
+    border-radius: 64px;
+}
+.title{
+    font-weight: bold;
+    font-size: 24px;
+    background-image: linear-gradient(45deg, #4400ff, #c908f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.details{
+    padding: 20px;
 }
 .discord{
     display: none;
@@ -60,3 +97,21 @@ footer{
 footer *{
     color: white;
 }
+@media only screen and (max-width: 700px) {
+    .container {
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr 1fr; 
+        gap: 20px 40px; 
+        grid-template-areas: 
+          "a"
+          "b"; 
+        justify-items: center; 
+      }
+    .a{
+        align-self: end;
+    }
+    .b{
+        align-self: start;
+    }
+  }
