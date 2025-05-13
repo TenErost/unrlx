@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+:root{
+    --background: #a286d5;
+    --gradient: linear-gradient(45deg, #4400ff, #c908f0)
+
+}
+
 *{
     margin: 0;
     box-sizing: border-box;
@@ -8,8 +14,8 @@
 body{
     background-color: black;
     color: white;
-    position: relative;
 }
+/* ######### GLOBALS ######### */
 .flex-center-column-left{
     display: flex;
     flex-direction: column;
@@ -28,6 +34,13 @@ body{
     justify-content: right;
     align-items: center;
 }
+.flex-row-left{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+/* #########  ######### */
 .container {
     display: grid;
     height: 100dvh; 
@@ -52,6 +65,8 @@ body{
 .card{
     margin: 20px;
     padding: 10px;
+    background-image: url(/assets/eva.gif);
+    background-position: center;
     background-color: a286d5;
     border-radius: 20px;
     font-family: 'Roboto Mono', monospace;
@@ -60,11 +75,14 @@ body{
 .pfp-image{
     width: 128px;
     border-radius: 64px;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
 }
 .title{
     font-weight: bold;
     font-size: 24px;
-    background-image: linear-gradient(45deg, #4400ff, #c908f0);
+    background-image: var(--gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -97,6 +115,7 @@ footer{
 footer *{
     color: white;
 }
+/* ######### PHONES ######### */
 @media only screen and (max-width: 700px) {
     .container {
         display: grid; 
