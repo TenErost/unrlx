@@ -65,7 +65,7 @@ body{
 .card{
     margin: 20px;
     padding: 10px;
-    background-image: url(../assets/eva.gif);
+    background-image: url("../eva.gif");
     background-position: center;
     /* background-color: a286d5; */
     border-radius: 20px;
